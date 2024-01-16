@@ -1,16 +1,14 @@
 import express from "express";
 import bodyParser from "body-parser";
-import mongoose from "mongoose";
+import mongoose, { connect } from "mongoose";
+const port=process.env.PORT || 3000;
+
 // import date from "/Users/prayagthaker/Desktop/WEB-DEVELOPMENT/todo-v1/date.js";
 const app=express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-app.listen(port);
+
 app.listen(port, function(){
     console.log("server is up and live");
 });

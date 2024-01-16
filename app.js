@@ -1,6 +1,6 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mongoose, { connect } from "mongoose";
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const port=process.env.PORT || 3000;
 
 // import date from "/Users/prayagthaker/Desktop/WEB-DEVELOPMENT/todo-v1/date.js";
